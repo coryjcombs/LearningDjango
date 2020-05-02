@@ -8,6 +8,7 @@ from django.db.models import Sum
 class Poll(models.Model):
     """A poll object for use in the application views and repository."""
     text = models.CharField(max_length=200)
+    author = models.CharField(max_length=100, blank=True)
     pub_date = models.DateTimeField('date published')
 
     def total_votes(self):
