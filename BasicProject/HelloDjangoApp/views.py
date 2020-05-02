@@ -10,7 +10,17 @@ def index(request):
         "HelloDjangoApp/index.html",
         {
             'title': "Hello Django",
-            'message': "Hello Django!",
+            'message': "Hello Django! ",
             'content': "This page was last loaded on " + now.strftime("%A, %d %B, %Y at %X") + "."
+        }
+    )
+
+def about(request):
+    return render(
+        request,
+        "HelloDjangoApp/about.html",
+        {
+            'title': "About HelloDjangoApp",
+            'content': "Example app page for Django."
         }
     )
